@@ -22,7 +22,7 @@
   // Redirect + handle discount codes
   var discountCode = getCookie("discount_code");
   if(discountCode) url.searchParams.append("discount_code", discountCode);
-  window.location.replace(url.toString());
+  if(!url.pathname.startsWith("/checkouts/")) window.location.replace(url.toString());
 </script>
 <!-- {{ content_for_header }} -->
 </head>
