@@ -18,7 +18,7 @@
             "heading": "{{ page.title }}",
             "show_square_logo": true,
             "show_partnership_info": true,
-            "button_text": "Apply",
+            "button_text": "{{ page.metafields.contrebande[\"page-action-button\"].value }}",
             "number_of_images": "4",
             "logo_position": "above",
             "corner_style": "rounded",
