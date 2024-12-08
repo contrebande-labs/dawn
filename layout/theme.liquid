@@ -1,6 +1,12 @@
 {% assign hydrogen_domain = 'contrebande.co' %}
-{% assign redirected_domains = "contrebande.shop,account.contrebande.shop" | split: "," %}
-{% if redirected_domains contains request.host %}
+{% assign redirected_domains = "contrebande.shop,account.contrebande.co,store.contrebande.shop,checkout.contrebande.co" | split: "," %}
+{% assign redirection_excluded_paths = "/pages/collab" | split: "," %}
+{% if redirection_excluded_paths contains request.path %}
+{% assign is_redirection_excluded = true %}
+{% else %}
+{% assign is_redirection_excluded = false %}
+{% endif %}
+{% if redirected_domains contains request.host and is_redirection_excluded == false %}
 <html>
 <head>
 <link rel="preconnect" href="https://{{hydrogen_domain}}" crossorigin>
@@ -11,20 +17,33 @@
 </style>
 <script>
   function getCookie(name) {
-    name = name + '=';
+    const prefix = name + '=';
     var cookies = document.cookie.split(';');
     return cookies.reduce((accumulator, cookie) => {
       cookie = cookie.trim();
-      if (cookie.indexOf(name) == 0) return cookie.trim.substring(name.length, cookie.length);
+      if (cookie.indexOf(prefix) == 0) return cookie.trim.substring(prefix.length, cookie.length);
       return accumulator;
     }, null);
   }
   const url = new URL(window.location.href);
   url.host = "{{hydrogen_domain}}";
   // Redirect + handle discount codes
-  var discountCode = getCookie("discount_code");
+  const discountCode = getCookie("discount_code");
   if(discountCode) url.searchParams.append("discount_code", discountCode);
   window.location.replace(url.toString());
+</script>
+</head>
+<body></body>
+</html>
+{% elsif request.host == 'collabs.contrebande.co' %}
+<html>
+<head>
+<style>
+:root { color-scheme: light; background-color: rgb(250 250 242); }
+@media (prefers-color-scheme: dark) { :root { color-scheme: dark; background-color: rgb(18 20 16); } }
+</style>
+<script>
+window.location.replace("https://contrebande.shop/pages/collab");
 </script>
 </head>
 <body></body>
