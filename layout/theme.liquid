@@ -1,6 +1,6 @@
 {% assign hydrogen_domain = 'contrebande.co' %}
-{% assign collabs_domain = 'collabs.contrebande.shop' %}
-{% if request.host != collabs_domain %}
+{% assign redirected_domains = "contrebande.shop,account.contrebande.shop" | split: "," %}
+{% if request.host in redirected_domains %}
 <html>
 <head>
 <link rel="preconnect" href="https://{{hydrogen_domain}}" crossorigin>
