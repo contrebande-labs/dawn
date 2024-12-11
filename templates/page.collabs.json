@@ -9,6 +9,27 @@
  */
 {
   "sections": {
+    "image_with_text_GpdXCf": {
+      "type": "image-with-text",
+      "custom_css": [
+        "img {}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/logo-svg.svg",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "bottom",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 80,
+        "padding_bottom": 0
+      }
+    },
     "collabs": {
       "type": "apps",
       "blocks": {
@@ -34,57 +55,10 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "image_with_text_GpdXCf": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_X896rj": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_AMFMk6": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_WWf3bC": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_X896rj",
-        "text_AMFMk6",
-        "button_WWf3bC"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/logo-svg.svg",
-        "height": "adapt",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
-    "collabs",
-    "image_with_text_GpdXCf"
+    "image_with_text_GpdXCf",
+    "collabs"
   ]
 }
