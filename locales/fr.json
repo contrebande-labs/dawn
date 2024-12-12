@@ -549,7 +549,8 @@
   "shopify": {
     "checkout": {
       "delivery_options": {
-        "pick_up_from_store": "Ramassage à l'entrepôt"
+        "pick_up_from_store": "Ramassage à l'entrepôt",
+        "pick_up_locations": "Lieux de ramassage"
       }
     }
   }
