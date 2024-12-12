@@ -552,6 +552,12 @@
         "pick_up_from_store": "Ramasser sur place",
         "pick_up_locations": "Lieux de ramassage",
         "pick_up": "Ramassage"
+      },
+      "local_pickup": {
+        "location_information": {
+          "one": "Il y a %{count} point de ramassage près de %{address}",
+          "other": "Il y a %{count} point de ramassage près de %{address}"
+        }
       }
     }
   }
