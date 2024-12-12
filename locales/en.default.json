@@ -537,7 +537,7 @@
   "shopify": {
     "checkout": {
       "delivery_options": {
-        "pick_up_from_store": "Pickup",
+        "pick_up_from_store": "Warehouse pickup",
         "pick_up_locations": "Pickup locations"
       },
       "order_summary": {
