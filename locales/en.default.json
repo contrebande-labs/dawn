@@ -542,6 +542,12 @@
       },
       "order_summary": {
         "pickup_label": "Warehouse pickup"
+      },
+      "local_pickup": {
+        "location_information": {
+          "one": "There is {{ count }} pickup location close to you",
+          "other": "There are {{ count }} pickup locations close to you"
+        }
       }
     }
   }
