@@ -538,6 +538,9 @@
     "checkout": {
       "delivery_options": {
         "pick_up_from_store": "Pickup"
+      },
+      "order_summary": {
+        "pickup_label": "Warehouse pickup"
       }
     }
   }
