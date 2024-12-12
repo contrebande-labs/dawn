@@ -559,6 +559,20 @@
           "other": "Il y a %{count} point de ramassage près de %{address}"
         }
       }
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Prêt en 1 heure",
+        "two_hours": "Prêt en 2 heures",
+        "four_hours": "Prêt en 4 heures",
+        "twenty_four_hours": "Prêt en 24 heures",
+        "two_to_four_days": "Prêt en 2 à 4 jours",
+        "five_or_more_days": "Prêt en 5 jours ou plus",
+        "zero_to_two_hours": "Prêt en 2 heures",
+        "two_to_four_hours": "Prêt en 4 heures",
+        "immediately": "Prêt pour le ramassage maintenant",
+        "next_day": "Prêt pour le ramassage le jour suivant"
+      }
     }
   }
 }
