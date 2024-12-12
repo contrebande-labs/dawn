@@ -551,7 +551,13 @@
       "delivery_options": {
         "pick_up_from_store": "Ramasser sur place",
         "pick_up_locations": "Lieux de ramassage",
-        "pick_up": "Ramassage"
+        "pick_up": "Ramassage",
+        "pick_up_in_one_hour": "Prêt en 1 heure",
+        "pick_up_in_two_hours": "Prêt en 2 heures",
+        "pick_up_in_four_hours": "Prêt en 4 heures",
+        "pick_up_in_twenty_four_hours": "Prêt en 24 heures",
+        "pick_up_in_two_to_four_days": "Prêt en 2 à 4 jours",
+        "pick_up_in_five_or_more_days": "Prêt en 5 jours ou plus"
       },
       "local_pickup": {
         "location_information": {
