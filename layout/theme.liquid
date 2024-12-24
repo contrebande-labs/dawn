@@ -29,7 +29,10 @@
   url.host = "{{hydrogen_domain}}";
   // Redirect + handle discount codes
   const discountCode = getCookie("discount_code");
-  if(discountCode) url.searchParams.append("discount_code", discountCode);
+  if(discountCode) {
+    url.searchParams.append("return_to", url.pathname);
+    url.pathname = `/discount/${discountCode}`;
+  }
   window.location.replace(url.toString());
 </script>
 </head>
