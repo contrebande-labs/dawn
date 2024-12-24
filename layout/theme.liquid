@@ -21,7 +21,7 @@
     var cookies = document.cookie.split(';');
     return cookies.reduce((accumulator, cookie) => {
       cookie = cookie.trim();
-      if (cookie.indexOf(prefix) == 0) return cookie.trim.substring(prefix.length, cookie.length);
+      if (cookie.indexOf(prefix) == 0) return cookie.substring(prefix.length, cookie.length);
       return accumulator;
     }, null);
   }
