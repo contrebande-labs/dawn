@@ -54,10 +54,10 @@
         "1246a420-cd08-4d32-a5e4-cb73f40cb616"
       ],
       "custom_css": [
-        "p:nth-child(2) {font-size: 0.9em; line-height: normal;}"
+        "p:nth-child(2) {text-align: left; font-size: 0.9em; line-height: normal;}"
       ],
       "settings": {
-        "include_margins": false
+        "include_margins": true
       }
     }
   },
