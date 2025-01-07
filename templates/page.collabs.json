@@ -53,8 +53,11 @@
       "block_order": [
         "1246a420-cd08-4d32-a5e4-cb73f40cb616"
       ],
+      "custom_css": [
+        "p:nth-child(2) {font-size: 0.9em; line-height: normal;}"
+      ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     }
   },
