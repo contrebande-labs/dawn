@@ -63,10 +63,10 @@
     "page_zVF7mR": {
       "type": "page",
       "custom_css": [
-        "h2 {display:none;}"
+        "h2 {display: none;}"
       ],
       "settings": {
-        "page": "{{ page }}",
+        "page": "collab",
         "heading_size": "h1",
         "color_scheme": "",
         "padding_top": 36,
