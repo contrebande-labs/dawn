@@ -59,10 +59,24 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "page_zVF7mR": {
+      "type": "page",
+      "custom_css": [
+        "h2 {display:none;}"
+      ],
+      "settings": {
+        "page": "{{ page }}",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_with_text_GpdXCf",
-    "collabs"
+    "collabs",
+    "page_zVF7mR"
   ]
 }

@@ -11,11 +11,26 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_liquid_i9g7Hx": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "style + div {text-align: center;}",
+        "a {color: currentColor; text-decoration: none;}",
+        "a:hover {color: black; text-decoration: underline;}"
+      ],
+      "settings": {
+        "custom_liquid": "<small>© {{  \"now\" | date: '%Y' }}, <a href=\"https://contrebande.co/\">Contrebande</a><small>",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 28
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
         "footer-0": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Quick links",
             "menu": "footer"
@@ -23,6 +38,7 @@
         },
         "footer-1": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Info",
             "menu": "footer"
@@ -30,6 +46,7 @@
         },
         "footer-2": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Our mission",
             "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
@@ -44,13 +61,13 @@
       "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": true,
+        "enable_follow_on_shop": false,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
-        "payment_enable": true,
+        "payment_enable": false,
         "show_policy": false,
         "margin_top": 48,
         "padding_top": 36,
@@ -59,6 +76,7 @@
     }
   },
   "order": [
+    "custom_liquid_i9g7Hx",
     "footer"
   ]
 }
