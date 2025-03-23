@@ -14,7 +14,7 @@
       "custom_css": [
         ".image-with-text > .grid {align-items: center; justify-content: center;}",
         ".image-with-text > .grid > .image-with-text__text-item {display: none;}",
-        ".image-with-text > .grid > .image-with-text__media {border: 0;}"
+        ".image-with-text > .grid > .image-with-text__media-item > .image-with-text__media {border: 0;}"
       ],
       "settings": {
         "image": "shopify://shop_images/logo-svg.svg",
