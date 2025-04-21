@@ -1,70 +1,6 @@
-{% comment %}
-  reference: https://github.com/Shopify/hydrogen-redirect-theme/blob/main/layout/theme.liquid
-{% endcomment %}
-{% assign hydrogen_domain = "contrebande.co" %}
-{% assign redirected_domains = "account.contrebande.co,store.contrebande.shop,checkout.contrebande.co" | split: "," %}
-{% assign redirection_excluded_paths = "/pages/collab" | split: "," %}
-{% assign collabs_domain = "collabs.contrebande.co" %}
-{% assign collabs_redirection = "https://contrebande.shop/pages/collab" %}
-{% assign storefront_domain = "contrebande.shop" %}
-{% assign facebook_verification = "al34q0aoax1olyqkqs84ilqpadtenb" %}
-{% if redirection_excluded_paths contains request.path %}
-{% assign is_redirection_excluded = true %}
-{% else %}
-{% assign is_redirection_excluded = false %}
-{% endif %}
-{% if redirected_domains contains request.host and is_redirection_excluded == false %}
-<html>
-<head>
-<link rel="preconnect" href="https://{{hydrogen_domain}}" crossorigin>
-<meta name="facebook-domain-verification" content="{{ facebook_verification }}" />
-<style>
-:root { color-scheme: light; background-color: rgb(250 250 242); }
-@media (prefers-color-scheme: dark) { :root { color-scheme: dark; background-color: rgb(18 20 16); } }
-</style>
-<script>
-  function getCookie(name) {
-    const prefix = name + '=';
-    var cookies = document.cookie.split(';');
-    return cookies.reduce((accumulator, cookie) => {
-      cookie = cookie.trim();
-      if (cookie.indexOf(prefix) == 0) return cookie.substring(prefix.length, cookie.length);
-      return accumulator;
-    }, null);
-  }
-  const url = new URL(window.location.href);
-  url.host = "{{hydrogen_domain}}";
-  // Redirect + handle discount codes
-  const discountCode = getCookie("discount_code");
-  if(discountCode) {
-    url.searchParams.append("return_to", url.pathname);
-    url.pathname = `/discount/${discountCode}`;
-  }
-  window.location.replace(url.toString());
-</script>
-</head>
-<body></body>
-</html>
-{% elsif request.host == collabs_domain %}
-<html>
-<link rel="preconnect" href="https://{{ storefront_domain }}" crossorigin>
-<meta name="facebook-domain-verification" content="{{ facebook_verification }}" />
-<head>
-<style>
-:root { color-scheme: light; background-color: rgb(250 250 242); }
-@media (prefers-color-scheme: dark) { :root { color-scheme: dark; background-color: rgb(18 20 16); } }
-</style>
-<script>
-window.location.replace("{{ collabs_redirection }}");
-</script>
-</head>
-<body></body>
-</html>
-{% else %}
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
-    <meta name="facebook-domain-verification" content="{{ facebook_verification }}" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -438,4 +374,3 @@ window.location.replace("{{ collabs_redirection }}");
     {%- endif -%}
   </body>
 </html>
-{% endif %}
