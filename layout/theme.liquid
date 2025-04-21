@@ -1,10 +1,13 @@
-{% assign hydrogen_domain = 'contrebande.co' %}
-{% assign redirected_domains = "contrebande.shop,account.contrebande.co,store.contrebande.shop,checkout.contrebande.co" | split: "," %}
+{% comment %}
+  reference: https://github.com/Shopify/hydrogen-redirect-theme/blob/main/layout/theme.liquid
+{% endcomment %}
+{% assign hydrogen_domain = "contrebande.co" %}
+{% assign redirected_domains = "account.contrebande.co,store.contrebande.shop,checkout.contrebande.co" | split: "," %}
 {% assign redirection_excluded_paths = "/pages/collab" | split: "," %}
-{% assign collabs_domain = 'collabs.contrebande.co' %}
-{% assign collabs_redirection = 'https://contrebande.shop/pages/collab' %}
-{% assign storefront_domain = 'contrebande.shop' %}
-{% assign facebook_verification = 'al34q0aoax1olyqkqs84ilqpadtenb' %}
+{% assign collabs_domain = "collabs.contrebande.co" %}
+{% assign collabs_redirection = "https://contrebande.shop/pages/collab" %}
+{% assign storefront_domain = "contrebande.shop" %}
+{% assign facebook_verification = "al34q0aoax1olyqkqs84ilqpadtenb" %}
 {% if redirection_excluded_paths contains request.path %}
 {% assign is_redirection_excluded = true %}
 {% else %}
