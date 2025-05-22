@@ -13,7 +13,6 @@
   "sections": {
     "custom_liquid_i9g7Hx": {
       "type": "custom-liquid",
-      "disabled": true,
       "custom_css": [
         "style + div {text-align: center;}",
         "a {color: currentColor; text-decoration: none;}",
